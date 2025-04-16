@@ -16,20 +16,44 @@ if (!isset($_SESSION['user'])) {
 </head>
 
 <body>
-    <h3><?php  echo "Hello, " . $_SESSION['user']['imie'];  ?></h3>
-    <div class="tablyczka">
-        <table >
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Imie</th>
-                <th>Comment</th>
-                <th>suma</th>
-                <th>data</th>
-                <th>edit</th>
-            </tr>
-        </thead>
-        <tbody>
+    <?php 
+        if (isset($_GET['id'])) {
+            $group_id = intval($_GET['id']); // zabezpieczenie
+            $data = json_decode(file_get_contents('groups.json'), true);
+            foreach ($data as $d) {
+                if ($d['id_g'] == $group_id) {
+                    $group_info = $d;
+                    break;
+                } 
+            }
+        } 
+        else {
+            echo "Brak ID grupy!";
+        }
+        $Users = json_decode(file_get_contents('users.json'), true);
+            
+        // Sprawdź, czy dane zostały poprawnie wczytane
+        if ($Users === null) {
+            echo "Błąd wczytywania danych z pliku.";
+            exit;
+        }
+        
+        $Users_g = json_decode(file_get_contents('group_users.json'), true);
+        
+        // Sprawdź, czy dane zostały poprawnie wczytane
+        if ($Users_g === null) {
+            echo "Błąd wczytywania danych z pliku.";
+            exit;
+        }
+        foreach ($Users as $u) {
+            if ($u['id_user'] == $group_id) {
+                $group_info = $d;
+                break;
+            } 
+        }    
+    ?>
+    <h3><?php  echo "Hello, " . $group_id;  ?></h3>
+   
             <?php 
             
             // Wczytaj dane z pliku JSON
@@ -90,8 +114,7 @@ if (!isset($_SESSION['user'])) {
                     <td style="width: 20%;"><button><?php  ?>edit</button></td>
                 </tr>
             <?php endforeach; ?>
-        </tbody>
-        </table>
+        
     </div>
     <div class="addform">
         <h3><?php echo "dodawanie nowego wpisu dla urzytkownika " . $_SESSION['user']['imie'];?></h3>

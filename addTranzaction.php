@@ -28,7 +28,8 @@ if (file_exists($plikDocelowy)) {
         'comment' => $comment,
         'counted' => false,
         'amount' => $amount,
-        'sptint' => 0
+        'sptint' => 0,
+        'group' => 1
     ];
 
     $tranzakcje[] = $nowy_wpis;

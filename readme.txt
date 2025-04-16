@@ -9,3 +9,11 @@ wyświtlanie całej sumy za jeden sprint
 
 zrobić wyświtlanie historii sprintów 
 
+zmienic font
+
+zrobic ładnie 
+
+
+
+
+baza w Mysql !!!!!!!!!!

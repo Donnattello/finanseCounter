@@ -7,7 +7,7 @@ body{
     text-align: center;
 }
 .tablyczka{
-    display: flex;
+    /*display: flex;
     justify-content: center; /* poziomo */
     /*align-items: center;     /* pionowo */
     max-width: 1440px;

@@ -6,7 +6,8 @@
         "comment": "",
         "counted": true,
         "amount": 26,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 2,
@@ -15,7 +16,8 @@
         "comment": "",
         "counted": true,
         "amount": 22.5,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 3,
@@ -24,7 +26,8 @@
         "comment": "",
         "counted": true,
         "amount": 17.5,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 4,
@@ -33,7 +36,8 @@
         "comment": "",
         "counted": true,
         "amount": 40,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 5,
@@ -42,7 +46,8 @@
         "comment": "",
         "counted": true,
         "amount": 10,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 6,
@@ -51,7 +56,8 @@
         "comment": "",
         "counted": true,
         "amount": 17.5,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 7,
@@ -60,7 +66,8 @@
         "comment": "",
         "counted": true,
         "amount": 16,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 8,
@@ -69,7 +76,8 @@
         "comment": "",
         "counted": true,
         "amount": 32,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 9,
@@ -78,7 +86,8 @@
         "comment": "",
         "counted": true,
         "amount": 38,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 10,
@@ -87,7 +96,8 @@
         "comment": "",
         "counted": true,
         "amount": 11,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 11,
@@ -96,7 +106,8 @@
         "comment": "",
         "counted": true,
         "amount": 8,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 12,
@@ -105,7 +116,8 @@
         "comment": "",
         "counted": true,
         "amount": 8,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 13,
@@ -114,7 +126,8 @@
         "comment": "",
         "counted": true,
         "amount": 67,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 14,
@@ -123,7 +136,8 @@
         "comment": "",
         "counted": true,
         "amount": 40,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 15,
@@ -132,7 +146,8 @@
         "comment": "",
         "counted": true,
         "amount": 41,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 16,
@@ -141,7 +156,8 @@
         "comment": "",
         "counted": true,
         "amount": 30,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 17,
@@ -150,7 +166,8 @@
         "comment": "",
         "counted": true,
         "amount": 15,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 18,
@@ -159,7 +176,8 @@
         "comment": "",
         "counted": true,
         "amount": 34.5,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 19,
@@ -168,7 +186,8 @@
         "comment": "",
         "counted": true,
         "amount": 70.5,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 20,
@@ -177,7 +196,8 @@
         "comment": "",
         "counted": true,
         "amount": 8,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 21,
@@ -186,7 +206,8 @@
         "comment": "",
         "counted": true,
         "amount": 30,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 22,
@@ -195,7 +216,8 @@
         "comment": "",
         "counted": true,
         "amount": 4.5,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 23,
@@ -204,7 +226,8 @@
         "comment": "",
         "counted": true,
         "amount": 7.5,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 24,
@@ -213,7 +236,8 @@
         "comment": "",
         "counted": true,
         "amount": 30,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 25,
@@ -222,7 +246,8 @@
         "comment": "",
         "counted": true,
         "amount": 44,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 26,
@@ -231,7 +256,8 @@
         "comment": "",
         "counted": true,
         "amount": 29,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 27,
@@ -240,7 +266,8 @@
         "comment": "",
         "counted": true,
         "amount": 35.5,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 28,
@@ -249,7 +276,8 @@
         "comment": "",
         "counted": true,
         "amount": 3,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 29,
@@ -258,7 +286,8 @@
         "comment": "",
         "counted": true,
         "amount": 20.5,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 30,
@@ -267,7 +296,8 @@
         "comment": "",
         "counted": true,
         "amount": 36,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 31,
@@ -276,7 +306,8 @@
         "comment": "",
         "counted": true,
         "amount": 8,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 32,
@@ -285,7 +316,8 @@
         "comment": "",
         "counted": true,
         "amount": 20,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 33,
@@ -294,7 +326,8 @@
         "comment": "",
         "counted": true,
         "amount": 28.5,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 34,
@@ -303,7 +336,8 @@
         "comment": "tedi",
         "counted": true,
         "amount": 21,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 35,
@@ -312,7 +346,8 @@
         "comment": "tedi",
         "counted": true,
         "amount": 9.5,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 36,
@@ -321,7 +356,8 @@
         "comment": "kebab",
         "counted": true,
         "amount": 13.5,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 37,
@@ -330,7 +366,8 @@
         "comment": "aushan",
         "counted": true,
         "amount": 37.5,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     },
     {
         "id_tr": 38,
@@ -339,6 +376,7 @@
         "comment": "ection",
         "counted": true,
         "amount": 31,
-        "sptint": 1
+        "sptint": 1,
+        "group": 1
     }
 ]

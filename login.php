@@ -22,7 +22,7 @@ foreach ($users as $user) {
 if ($zalogowany) {
     // Zaloguj użytkownika
     $_SESSION['user'] = $zalogowany;
-    header('Location: finanseCounter.php');
+    header('Location: group.php');
     exit; // Ważne, by zatrzymać dalsze wykonywanie skryptu
 } else {
     echo "Błędne dane logowania!";

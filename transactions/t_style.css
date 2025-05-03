@@ -1,0 +1,46 @@
+.body{
+    margin: 16px;
+}
+
+
+.transaction_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 12px;
+    margin: 4px 0;
+    border-radius: 8px;
+    color: #000;
+    background-color: darkgrey;
+    font-family: sans-serif;
+    
+}
+
+.t1 h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.t1 h4 {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
+.t2 h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.edit_icon a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-left: 10px;
+    color: #333;
+}
+
+.edit_icon {
+    display: flex;
+    align-items: center;
+}

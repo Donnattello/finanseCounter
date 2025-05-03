@@ -3,28 +3,30 @@
 session_start();
 
 // Dane z formularza
-$imie = $_POST['imie'] ?? '';
+$u_name = $_POST['imie'] ?? '';
 $haslo = $_POST['password'] ?? '';
 
+require_once 'db.php';
 // Wczytaj użytkowników
-$users = json_decode(file_get_contents('users.json'), true);
+try {
+    // Zapytanie SQL do bazy danych
+    $stmt = $pdo->prepare("SELECT * FROM users WHERE u_name = :u_name AND password = :password");
+    $stmt->execute([
+        ':u_name' => $u_name,
+        ':password' => $haslo // UWAGA: lepiej hasło zahaszować (patrz niżej)
+    ]);
 
-// Szukamy użytkownika
-$zalogowany = null;
+    $zalogowany = $stmt->fetch(PDO::FETCH_ASSOC);
 
-foreach ($users as $user) {
-    if ($user['imie'] === $imie && $user['password'] === $haslo) {
-        $zalogowany = $user;
-        break;
+    if ($zalogowany) {
+        $_SESSION['user'] = $zalogowany;
+        header('Location: groups\\group.php');
+        exit;
+    } else {
+        echo "Błędne dane logowania!";
     }
-}
 
-if ($zalogowany) {
-    // Zaloguj użytkownika
-    $_SESSION['user'] = $zalogowany;
-    header('Location: group.php');
-    exit; // Ważne, by zatrzymać dalsze wykonywanie skryptu
-} else {
-    echo "Błędne dane logowania!";
+} catch (PDOException $e) {
+    echo "Database connection error: " . $e->getMessage();
 }
 ?>

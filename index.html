@@ -4,21 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Finanse counter</h1>
-    <form action="\login.php" method="post">
-        <label>name:
-        <input type="text" name="imie" required>
-        </label><br><br>
+    <h1>Log in</h1>
+    <div class="addform">
+        <form action="login.php" method="post">
+            <label>name:
+            <input type="text" name="imie" required>
+            </label><br>
 
-        <label>password:
-        <input type="password" name="password" required>
-        </label><br><br>
+            <label>password:
+            <input type="password" name="password" required>
+            </label><br>
 
-        <input type="submit" value="Zaloguj">
-    </form>
-    
+            <input class="buttons" type="submit" value="Zaloguj">
+        </form>
+    </div>
     
     
 

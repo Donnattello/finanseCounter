@@ -2,7 +2,10 @@
     margin: 16px;
 }
 
-
+.transactions{
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
 .transaction_box {
     display: flex;
     justify-content: space-between;
@@ -10,8 +13,6 @@
     padding: 4px 12px;
     margin: 4px 0;
     border-radius: 8px;
-    color: #000;
-    background-color: darkgrey;
     font-family: sans-serif;
     
 }

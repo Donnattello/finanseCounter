@@ -2,5 +2,9 @@
     {
         "id_img": 1,
         "path": "\\imgs\\1.png"
+    },
+    {
+        "id_img": 2,
+        "path": "\\imgs\\2.png"
     }
 ]

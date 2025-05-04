@@ -3,14 +3,18 @@ body{
     padding: 0;
 }
 .group_box{
+    display: flex;
+    justify-content:flex-start;
+    gap: 12px;
     padding: 12px;
-    border: 1px solid black;
+    border: none;
+    background-color: #252525;
     width: auto;
     margin-bottom: 4px;
     margin-top: 4px;
     border-radius: 8px;
     text-decoration: none;
-
+    margin-top: 12px;
 }
 .group_box h3{
     margin: 0;
@@ -18,4 +22,7 @@ body{
 }
 .group_box h4{
     margin: 0;
+}
+.ava{
+    height: 60px;
 }

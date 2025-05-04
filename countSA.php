@@ -13,19 +13,25 @@ if (!isset($_SESSION['user'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>g</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="t_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    
     <?php
    
 
-    require_once __DIR__ . '/../db.php';
+    require_once 'db.php';
 
     if (isset($_GET['id'])) {
         $groupId = intval($_GET['id']);
-    }
+    }?>
 
+    <a href="/finanseCounter.php?id=<?= $groupId ?>"><img class="arrow_back" src="/imgs/arrow_back.png" alt="arrow back"></a>
+    
+    <?php
     try {
         // Zapytanie SQL do bazy danych
         $stmt = $pdo->prepare("SELECT gu.user_id, u.u_name, COALESCE(SUM(t.amount), 0) AS total_amount
@@ -161,22 +167,24 @@ if (!isset($_SESSION['user'])) {
 
 
 
-?>w00
-<h3>total sum<?php echo htmlspecialchars($totalSum); ?></h3>
-<h2>Who owes whom:</h2>
-<ul>
-<?php
-for ($i = 0; $i < $userCount; $i++) {
-    for ($j = 0; $j < $userCount; $j++) {
-        $amount = $debtMatrix[$i][$j];
-        if ($amount > 0) {
-            echo "<li><strong>" . htmlspecialchars($userNames[$i]) . "</strong> owes <strong>" . 
-                 htmlspecialchars($userNames[$j]) . "</strong>: <strong>" . number_format($amount, 2) . " zł</strong></li>";
-        }
-    }
-}
 ?>
-</ul>
+
+
+    <h3>total sum<?php echo htmlspecialchars($totalSum); ?></h3>
+    <h2>Who owes whom:</h2>
+    <h3>
+        <?php
+        for ($i = 0; $i < $userCount; $i++) {
+            for ($j = 0; $j < $userCount; $j++) {
+                $amount = $debtMatrix[$i][$j];
+                if ($amount > 0) {
+                    echo "<li><strong>" . htmlspecialchars($userNames[$i]) . "</strong> owes <strong>" . 
+                        htmlspecialchars($userNames[$j]) . "</strong>: <strong>" . number_format($amount, 2) . " zł</strong></li>";
+                }
+            }
+        }
+        ?>
+    </h3>
 
 
 </body>

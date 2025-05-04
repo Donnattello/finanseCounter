@@ -8,7 +8,7 @@ if (!isset($_SESSION['user'])) {
 ?>
 
 <?php
-require_once __DIR__ . '/../db.php';
+require_once 'db.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Get data from the form

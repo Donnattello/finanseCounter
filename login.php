@@ -20,7 +20,7 @@ try {
 
     if ($zalogowany) {
         $_SESSION['user'] = $zalogowany;
-        header('Location: groups\\group.php');
+        header('Location: group.php');
         exit;
     } else {
         echo "Błędne dane logowania!";

@@ -14,13 +14,17 @@ if (!isset($_SESSION['user'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>your groups</title>
     <link rel="stylesheet" href="style_group.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <h3><?php  echo "Hello, " . $_SESSION['user']['u_name'];  ?></h3>
 
 
     <?php 
-            require_once __DIR__ . '/../db.php';
+            require_once 'db.php';
             // Wczytaj użytkowników
             try {
                 // Zapytanie SQL do bazy danych
@@ -28,8 +32,9 @@ if (!isset($_SESSION['user'])) {
                                         FROM group_users AS ug 
                                         JOIN groups AS g ON g.id_g = ug.group_id
                                         JOIN users AS u ON u.id_user = g.owner_id
-                                        JOIN group_users AS gu2 ON gu2.group_id = g.id_g
+                                        left JOIN group_users AS gu2 ON gu2.group_id = g.id_g
                                         WHERE  ug.user_id = :id_u
+                                        GROUP BY g.id_g
                                         ");
                 $stmt->execute([
                     ':id_u' => $_SESSION['user']['id_user'],
@@ -42,7 +47,7 @@ if (!isset($_SESSION['user'])) {
                 echo "Database connection error: " . $e->getMessage();
             }
             // Wczytaj dane z pliku JSON
-            $ava = json_decode(file_get_contents( __DIR__ . '/../imgs.json'), true);
+            $ava = json_decode(file_get_contents('imgs.json'), true);
             
             // Sprawdź, czy dane zostały poprawnie wczytane
             if ($ava === null) {
@@ -51,7 +56,7 @@ if (!isset($_SESSION['user'])) {
             }
             
             foreach ($groups as $g): ?>
-                <a href="../transactions/finanseCounter.php?id=<?= $g['id_g'] ?>" style="text-decoration: none;color:black">
+                <a href="finanseCounter.php?id=<?= $g['id_g'] ?>" style="text-decoration: none;color:black">
                     <div class="group_box">
                         <div>
                             <?php
@@ -65,7 +70,7 @@ if (!isset($_SESSION['user'])) {
                             }
                             
                             ?>
-                            <img src="<?= $imgPath ?>" alt="img of group">
+                            <img class="ava" src="<?= $imgPath ?>" alt="img of group">
                         </div>
                         <div>
                             <h3><?php echo htmlspecialchars($g['g_name']); ?></h3>
